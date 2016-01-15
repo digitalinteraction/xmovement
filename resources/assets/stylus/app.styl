@@ -1,0 +1,93 @@
+/* Import snippets */
+@import 'snippets'
+
+/* Import variables */
+@import 'variables'
+
+// Navbar
+nav
+	position absolute
+	top 0
+	width 100% 
+	z-index 999
+.navbar-default
+	background-color transparent
+	border none
+	border-top main-color 4px solid
+	border-radius 0px
+	position absolute
+	a.navbar-brand
+		color white 
+		font-size 30px 
+		font-weight 200
+		&:hover
+			color main-color
+		strong
+			font-weight 400 
+	.navbar-nav > li > a
+		color white
+		font-weight 300
+		
+		&:hover
+			color main-color
+			border-bottom main-color 2px solid
+.hero-container
+	background-color #333
+	background-image url('https://static.pexels.com/photos/5888/garden-sitting-grass-shoes.jpg')
+	background-size cover
+	background-position center
+	background-repeat no-repeat
+	padding 170px 20px 150px 20px
+	position relative
+	margin-top -20px
+	.black-overlay
+		background-color rgba(20,0,0,0.4)  
+		position absolute
+		top 0
+		bottom 0
+		left 0
+		right 0
+	
+.start-event-container
+	text-align center
+	h1
+		color white 
+		font-weight 100 
+		margin-bottom 30px 
+	button
+		background transparent
+		border white 2px solid
+		border-radius 0px
+		color white
+		font-size 18px 
+		font-weight 300 
+		margin 0 auto
+		outline 0
+		padding 6px 24px
+		text-align center
+		&:hover
+			background-color main-color
+			border-color main-color
+			
+		
+	input
+		background rgba(0,0,0,0.2)
+		border none
+		border-radius 6px
+		color white
+		font-size 34px 
+		margin 0 auto
+		outline 0
+		padding 10px 20px
+		text-align center
+
+::-webkit-input-placeholder
+	color rgba(255,255,255,0.3)
+:-moz-placeholder
+	color rgba(255,255,255,0.3)
+::-moz-placeholder
+	color rgba(255,255,255,0.3)
+:-ms-input-placeholder
+	color rgba(255,255,255,0.3)
+:placeholder-shown
+	color rgba(255,255,255,0.3)
