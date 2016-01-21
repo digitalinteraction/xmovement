@@ -29,28 +29,39 @@ class AuthController extends Controller
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('facebook')->user();
-
-        // Check if there is an existing user with email
-        if (User::where('email', '=', $user->getEmail())->exists()) {
-           
-            // Update the user tokens and empty fields
-            User::where('email', $user->getEmail())->update(['token' => $user->token]);
-
-        } else {
-
-            // If no user with email then create user
-            User::create([
-                'name' => $user->getName(),
-                'email' => $user->getEmail(),
-                'token' => $user->token
-            ]);
-
-            // Would you like to add a password so you can login without facebook in the future?
-
+        try {
+            $user = Socialite::driver('facebook')->user();
+        } catch (Exception $e) {
+            return Redirect::to('auth/facebook');
         }
 
+        $authUser = $this->findOrCreateUser($user);
+
+        Auth::login($authUser, true);
+
+        // return Redirect::to('home');
         return redirect()->action('PageController@home');
+    }
+
+    /**
+     * Return user if exists; create and return if doesn't
+     *
+     * @param $facebookUser
+     * @return User
+     */
+    private function findOrCreateUser($facebookUser)
+    {
+        if ($authUser = User::where('facebook_id', $facebookUser->id)->first()) {
+            return $authUser;
+        }
+
+        return User::create([
+            'facebook_id' => $facebookUser->id,
+            'name' => $facebookUser->name,
+            'email' => $facebookUser->email,
+            'avatar' => $facebookUser->avatar,
+            'token' => $user->token
+        ]);
     }
 
     /*
