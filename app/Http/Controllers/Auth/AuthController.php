@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 use Socialite;
+use Auth;
 
 class AuthController extends Controller
 {
@@ -56,10 +57,10 @@ class AuthController extends Controller
         }
 
         return User::create([
-            'facebook_id' => $facebookUser->id,
-            'name' => $facebookUser->name,
-            'email' => $facebookUser->email,
-            'avatar' => $facebookUser->avatar,
+            'facebook_id' => $facebookUser->getId(),
+            'name' => $facebookUser->getName(),
+            'email' => $facebookUser->getEmail(),
+            'avatar' => $facebookUser->getAvatar(),
             'token' => $facebookUser->token
         ]);
     }
@@ -104,7 +105,6 @@ class AuthController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'username' => 'required|max:255|unique:users',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
@@ -120,7 +120,6 @@ class AuthController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-            'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
