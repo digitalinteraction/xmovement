@@ -34,7 +34,7 @@ class AuthController extends Controller
         // Check if there is an existing user with email
         if (User::where('email', '=', $user->getEmail())->exists()) {
            
-           // Update the user tokens and empty fields
+            // Update the user tokens and empty fields
             User::where('email', $user->getEmail())->update(['token' => $user->token]);
 
         } else {

@@ -5,7 +5,7 @@
 		    {{ $event->name }}
 		</h4>
 		<p>
-		    Posted by <a href="/user/{{ $event->user->username }}">{{ $event->user->username }}</a>
+		    Posted by <a href="/user/{{ $event->user_id }}">{{ $event->user->username or $event->user_id }}</a>
 		</p>
 	</div>
 </div>

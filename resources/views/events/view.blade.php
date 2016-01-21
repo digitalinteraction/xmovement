@@ -5,7 +5,7 @@
 	<div class="page-header">
 	    
         <h2 class="main-title">{{ $event->name }}</h2>
-		<h5 class="sub-title">Organized by <a href="/user/{{ $event->user->username }}">{{ $event->user->username }}</a></h5>
+		<h5 class="sub-title">Organized by <a href="/user/{{ $event->user_id }}">{{ $event->user->username or $event->user_id }}</a></h5>
 
 	</div>
 
@@ -43,7 +43,6 @@
 	    			</ul>
 
 	    			<div class="btn btn-primary">Support this Event</div>
-	    			<!-- {{ $event->user->first_name }} {{ $event->user->last_name }} -->
 
 	    		</div>
 
