@@ -14,11 +14,11 @@ require('laravel-elixir-stylus');
  */
 
 elixir(function(mix) {
-	mix.sass('node_modules/bootstrap-sass/assets/stylesheets/bootstrap');
 	mix.sass('imports.scss');
 	mix.stylus('app.styl');
-	mix.stylus('home.styl');
+    mix.copy('node_modules/masonry-layout/dist/masonry.pkgd.min.js', 'public/js/masonry.js');
     mix.browserSync({
-        proxy: 'eventmovement.local'
+        proxy: 'eventmovement.local',
+        notify: false
     });
 });

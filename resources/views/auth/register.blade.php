@@ -1,48 +1,40 @@
-@extends('layouts.app')
+@extends('layouts.colorful')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+
+    <div class="page-header">
+        
+        <h2 class="main-title">Register</h2>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            
+            <div class="register-panel">
+
+                    <form class="register-form" role="form" method="POST" action="{{ url('/register') }}">
                         {!! csrf_field() !!}
 
-                        <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">First Name</label>
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label class="control-label">Name</label>
 
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}">
+                            <div class="">
+                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Name">
 
-                                @if ($errors->has('first_name'))
+                                @if ($errors->has('name'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('first_name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Last Name</label>
-
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
-
-                                @if ($errors->has('last_name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('last_name') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Username</label>
+                            <label class="control-label">Username</label>
 
-                            <div class="col-md-6">
-                                <input type="username" class="form-control" name="username" value="{{ old('username') }}">
+                            <div class="">
+                                <input type="username" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username">
 
                                 @if ($errors->has('username'))
                                     <span class="help-block">
@@ -53,10 +45,10 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">E-Mail Address</label>
+                            <label class="control-label">Email Address</label>
 
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                            <div class="">
+                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -67,10 +59,10 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Password</label>
+                            <label class="control-label">Password</label>
 
-                            <div class="col-md-6">
-                                <input type="password" class="form-control" name="password">
+                            <div class="">
+                                <input type="password" class="form-control" name="password" placeholder="Password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -81,10 +73,10 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Confirm Password</label>
+                            <label class="control-label">Confirm Password</label>
 
-                            <div class="col-md-6">
-                                <input type="password" class="form-control" name="password_confirmation">
+                            <div class="">
+                                <input type="password" class="form-control" name="password_confirmation" placeholder="Password">
 
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
@@ -95,12 +87,25 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i>Register
-                                </button>
-                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Register
+                            </button>
+                            <br />
+                            <a class="btn btn-link login-link" href="{{ url('/login') }}">Already have an account?</a>
                         </div>
+
+                        <div class="text-linethru">
+                            <div class="line"></div>
+                            <div class="text">or</div>
+                        </div>
+
+                        <div class="form-group">
+                            <a class="btn btn-facebook" href="{{ action('Auth\AuthController@redirectToProvider') }}">
+                                <i class="fa fa-facebook"></i>
+                                Log in with Facebook
+                            </a>
+                        </div>
+
                     </form>
                 </div>
             </div>

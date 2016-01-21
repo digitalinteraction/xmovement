@@ -3628,7 +3628,7 @@ tbody.collapse.in {
 
 .navbar {
   position: relative;
-  min-height: 80px;
+  min-height: 60px;
   margin-bottom: 20px;
   border: 1px solid transparent; }
   .navbar:before, .navbar:after {
@@ -3734,10 +3734,10 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 30px 15px;
+  padding: 20px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 80px; }
+  height: 60px; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
   .navbar-brand > img {
@@ -3752,8 +3752,8 @@ tbody.collapse.in {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 23px;
-  margin-bottom: 23px;
+  margin-top: 13px;
+  margin-bottom: 13px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3772,7 +3772,7 @@ tbody.collapse.in {
       display: none; } }
 
 .navbar-nav {
-  margin: 15px -15px; }
+  margin: 10px -15px; }
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -3800,8 +3800,8 @@ tbody.collapse.in {
       .navbar-nav > li {
         float: left; }
         .navbar-nav > li > a {
-          padding-top: 30px;
-          padding-bottom: 30px; } }
+          padding-top: 20px;
+          padding-bottom: 20px; } }
 
 .navbar-form {
   margin-left: -15px;
@@ -3810,8 +3810,8 @@ tbody.collapse.in {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 23px;
-  margin-bottom: 23px; }
+  margin-top: 13px;
+  margin-bottom: 13px; }
   @media (min-width: 768px) {
     .navbar-form .form-group {
       display: inline-block;
@@ -3878,18 +3878,18 @@ tbody.collapse.in {
   border-bottom-left-radius: 0; }
 
 .navbar-btn {
-  margin-top: 23px;
-  margin-bottom: 23px; }
+  margin-top: 13px;
+  margin-bottom: 13px; }
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-    margin-top: 25px;
-    margin-bottom: 25px; }
+    margin-top: 15px;
+    margin-bottom: 15px; }
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
-    margin-top: 29px;
-    margin-bottom: 29px; }
+    margin-top: 19px;
+    margin-bottom: 19px; }
 
 .navbar-text {
-  margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-top: 20px;
+  margin-bottom: 20px; }
   @media (min-width: 768px) {
     .navbar-text {
       float: left;
@@ -5748,12 +5748,5 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-
-/**
- * Foundation for Sites by ZURB
- * Version 6.1.1
- * foundation.zurb.com
- * Licensed under MIT Open Source
- */
 
 /*# sourceMappingURL=imports.css.map */

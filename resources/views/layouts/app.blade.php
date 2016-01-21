@@ -14,70 +14,33 @@
     <!-- Styles -->
     <link href="/css/imports.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Lato';
-        }
-
-        .fa-btn {
-            margin-right: 6px;
-        }
-    </style>
+    
 </head>
-<body id="app-layout">
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
+<body class="fade-nav" data-navbar-type="{{ $navtype or 'navbar-default' }}" id="app-layout">
+    
+    @include('facebook-sdk')
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <strong>Eventie</strong>.co
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar --><!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url('/start') }}">Start</a></li>
-                
-                    <li><a href="{{ url('/discover') }}">Discover</a></li>
-                
-                    <li><a href="{{ url('/about') }}">About</a></li>
-
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-        </div>
-    </nav>
+    @include('navbar')
 
     @yield('content')
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+
+    <script src='/js/file_uploader/vendor/jquery.ui.widget.js'></script>
+    <script src='/js/file_uploader/jquery.iframe-transport.js'></script>
+    <script src='/js/file_uploader/jquery.fileupload.js'></script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/masonry.js"></script>
+
+
+    <script type="text/javascript">
+
+        var $container = $('.panel-body');
+        $container.masonry();
+
+    </script>
 </body>
 </html>

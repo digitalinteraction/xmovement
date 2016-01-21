@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@home');
 
 /*
 |--------------------------------------------------------------------------
@@ -28,39 +26,20 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
 
-	/**
-     * Authentication Routes
-     */
+    // Auth routes
 	Route::auth();
 
-    /**
-     * Show Home Page
-     */
-    Route::get('/', function () {
-        
-        return view('home');
-    });
+    Route::get('auth/facebook', 'Auth\AuthController@redirectToProvider');
+    Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');
 
-    /**
-     * List All Users
-     */
-    Route::get('/users', function () {
-        
-        return view('users/index');
-    });
+    // Page routes
+    Route::get('/', 'PageController@home');
+    Route::get('/about', 'PageController@about');
 
-    /**
-     * Add New User
-     */
-    Route::post('/user', function (Request $request) {
-        //
-    });
-
-    /**
-     * Delete User
-     */
-    Route::delete('/user/{user}', function (User $user) {
-        //
-    });
+    // Event routes
+    Route::get('/explore', 'EventController@index');
+    Route::get('/create', 'EventController@add');
+    Route::post('/event', 'EventController@store');
+    Route::get('/event/{event}', 'EventController@view');
 
 });

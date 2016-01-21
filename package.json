@@ -5,7 +5,8 @@
     "laravel-elixir-stylus": "^1.0.1"
   },
   "dependencies": {
+    "bootstrap-sass": "^3.0.0",
     "laravel-elixir": "^4.0.0",
-    "bootstrap-sass": "^3.0.0"
+    "masonry-layout": "^4.0.0"
   }
 }

@@ -1,0 +1,76 @@
+// Navbar
+nav
+	position absolute
+	top 0
+	width 100% 
+	z-index 999
+.navbar
+	background-color rgba(255,255,255,0.9)
+	border none
+	border-radius 0px
+	position fixed
+	&:after
+		background-color main-color
+		content ""
+		height 4px
+		margin 0 auto
+		opacity 1
+		width 100%
+		transition(all 0.4s linear)
+	transition(all 0.2s linear)
+	a.navbar-brand
+		color #444 
+		font-size 30px 
+		font-weight 300
+		transition(color 0.2s linear)
+		&:hover
+			color main-color
+		strong
+			font-weight 400 
+	.navbar-nav > li
+		height 38px 
+		z-index 999 
+	.navbar-nav > li > a
+		color #666
+		font-size 14px 
+		font-weight 500
+		transition(color 0.2s linear)
+		&:hover
+			background transparent 
+			color main-color
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+	background-color transparent
+.dropdown-menu
+	border none 
+	top auto
+	margin 0
+	overflow hidden
+	padding 0
+	li
+		a
+			padding 15px 20px
+.navbar-toggle
+	.icon-bar
+		background-color white
+	&:hover
+		.icon-bar
+			background-color main-color
+			
+body.fade-nav
+	&.colorful
+		.navbar
+			background-color white
+	.navbar-transparent
+		background-color transparent
+		&:after
+			opacity 0 
+			width 0px
+		a.navbar-brand
+			color white
+		.navbar-nav > li > a
+			color white
+			transition(color 0.2s linear)
+			&:hover
+				background transparent 
+				color main-color

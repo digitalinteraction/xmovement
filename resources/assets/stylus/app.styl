@@ -4,35 +4,50 @@
 /* Import variables */
 @import 'variables'
 
-// Navbar
-nav
-	position absolute
-	top 0
+/* Import components */
+@import 'components/buttons'
+@import 'components/fileupload'
+
+/* Import elements */
+@import 'elements/navbar'
+@import 'elements/page-header'
+@import 'elements/event-tile'
+
+@import 'events/view'
+@import 'events/add'
+
+body
+	font-family 'Lato'
+	padding-top 85px
+body[data-navbar-type="navbar-transparent"]
+	padding-top 0
+
+.visuallyhidden 
+	display none 
+	
+a
+	color main-color
+
+.text-linethru
+	padding 10px 
 	width 100% 
-	z-index 999
-.navbar-default
-	background-color transparent
-	border none
-	border-top main-color 4px solid
-	border-radius 0px
-	position absolute
-	a.navbar-brand
-		color white 
-		font-size 30px 
-		font-weight 200
-		&:hover
-			color main-color
-		strong
-			font-weight 400 
-	.navbar-nav > li > a
-		color white
-		font-weight 300
-		
-		&:hover
-			color main-color
-			border-bottom main-color 2px solid
+	.line
+		background-color #ddd
+		height 1px 
+		width 100% 
+	.text
+		background white 
+		color #bbb 
+		display inline-block
+		font-size 16px 
+		height 20px
+		line-height 15px  
+		padding 0 10px 
+		position relative
+		top -10px
+
 .hero-container
-	background-color #333
+	background-color rgba(30,0,0,1)
 	background-image url('https://static.pexels.com/photos/5888/garden-sitting-grass-shoes.jpg')
 	background-size cover
 	background-position center
@@ -41,53 +56,77 @@ nav
 	position relative
 	margin-top -20px
 	.black-overlay
-		background-color rgba(20,0,0,0.4)  
+		background-color rgba(30,0,0,0.4)
 		position absolute
 		top 0
 		bottom 0
 		left 0
 		right 0
 	
-.start-event-container
+.text-container
 	text-align center
 	h1
 		color white 
-		font-weight 100 
+		font-weight 300 
 		margin-bottom 30px 
 	button
 		background transparent
 		border white 2px solid
 		border-radius 0px
 		color white
-		font-size 18px 
+		font-size 20px 
 		font-weight 300 
 		margin 0 auto
 		outline 0
-		padding 6px 24px
+		padding 8px 26px
 		text-align center
 		&:hover
 			background-color main-color
 			border-color main-color
-			
-		
-	input
-		background rgba(0,0,0,0.2)
-		border none
-		border-radius 6px
-		color white
-		font-size 34px 
-		margin 0 auto
-		outline 0
-		padding 10px 20px
-		text-align center
 
-::-webkit-input-placeholder
-	color rgba(255,255,255,0.3)
-:-moz-placeholder
-	color rgba(255,255,255,0.3)
-::-moz-placeholder
-	color rgba(255,255,255,0.3)
-:-ms-input-placeholder
-	color rgba(255,255,255,0.3)
-:placeholder-shown
-	color rgba(255,255,255,0.3)
+.panel-heading
+	h2
+		margin 40px 0 10px 0
+	
+body.colorful
+	background-color main-color
+	.page-header
+		border none
+		h2
+			color white
+
+.login-panel, .register-panel
+	background-color white
+	border-radius 6px
+	margin 0 auto
+	max-width 460px
+	min-width 320px
+	padding 40px 60px 10px 60px 
+	text-align center
+	
+	.login-form, .register-form
+		position relative
+		left auto
+		right auto
+		top auto
+		bottom auto
+		.form-group
+			margin-bottom 20px !important 
+			.control-label
+				color #888
+				margin-bottom 10px 
+			.form-control
+				border #e1e1e1 1px solid
+				border-radius 4px
+				box-shadow none
+				height auto 
+				font-size 18px
+				margin 0 auto 20px auto
+				max-width 400px 
+				padding 15px
+				text-align center
+				width 100%
+		.forgot-link, .login-link
+			color #999
+			margin 10px 10px 0 10px 
+			text-decoration underline 
