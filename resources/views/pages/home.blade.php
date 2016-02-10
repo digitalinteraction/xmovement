@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-container">
-                        <h1>Let's make your next event a success</h1>
+                        <h1>Make your next idea a reality</h1>
                         <a href="{{ action('EventController@add') }}">
                             <button>Get Started</button>
                         </a>
@@ -22,7 +22,7 @@
             <div class="col-md-12">
                 <div class="panel">
                     <div class="panel-heading text-center">
-                        <h2>Featured Events</h2>
+                        <h2>Featured Ideas</h2>
                     </div>
                         
                     <div class="row">

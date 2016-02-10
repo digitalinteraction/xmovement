@@ -10,7 +10,7 @@
                 </button>
 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <strong>eventie</strong>.co
+                    <strong>X</strong>M
                 </a>
             </div>
 
