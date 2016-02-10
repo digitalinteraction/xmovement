@@ -2,12 +2,11 @@
 
 Navigate to homestead folder
 
-cd ~/Homestead && vagrant up && vagrant ssh && cd Code && artisan migrate && artisan db:seed
-or
-xm
+cd ~/Homestead && vagrant up && vagrant ssh
+cd Code && artisan migrate:refresh --seed
 
-# Seed the database
-php artisan migrate:refresh --seed
+# Migrate and seed the database
+artisan migrate:refresh --seed
 
 vagrant destroy --force
 
