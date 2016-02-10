@@ -14,6 +14,7 @@
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
+        'bio' => $faker->text($maxNbChars = 200),
         'email' => $faker->email,
         'userName' => $faker->userName,
         'avatar' => $faker->imageUrl($width = 960, $height = 960, 'people'),
@@ -24,7 +25,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Event::class, function (Faker\Generator $faker) {
+$factory->define(App\Idea::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'description' => $faker->text($maxNbChars = 400),

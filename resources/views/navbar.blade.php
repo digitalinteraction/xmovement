@@ -17,9 +17,9 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ action('EventController@add') }}">{{ trans('navbar.create') }}</a></li>
+                    <li><a href="{{ action('IdeaController@add') }}">{{ trans('navbar.create') }}</a></li>
                 
-                    <li><a href="{{ action('EventController@index') }}">{{ trans('navbar.explore') }}</a></li>
+                    <li><a href="{{ action('IdeaController@index') }}">{{ trans('navbar.explore') }}</a></li>
                 
                     <li><a href="{{ action('PageController@about') }}">{{ trans('navbar.about') }}</a></li>
 
@@ -34,7 +34,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/profile') }}"></i>{{ trans('navbar.profile') }}</a></li>
-                                <li><a href="{{ url('/editprofile') }}"></i>{{ trans('navbar.edit') }}</a></li>
+                                <li><a href="{{ url('/profile#preferences') }}"></i>{{ trans('navbar.preferences') }}</a></li>
                                 <li><a href="{{ url('/logout') }}"></i>{{ trans('navbar.logout') }}</a></li>
                             </ul>
                         </li>

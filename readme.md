@@ -1,3 +1,5 @@
+## Build Process - EJ
+
 ## Environment Setup
 
 Navigate to homestead folder
@@ -9,6 +11,16 @@ cd Code && artisan migrate:refresh --seed
 artisan migrate:refresh --seed
 
 vagrant destroy --force
+
+# Gulp for preprocessing
+
+Remember 'gulp watch' for monitoring changes to styling
+
+npm install --global gulp
+
+npm install
+
+
 
 ## Laravel PHP Framework
 
@@ -37,19 +49,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
-
-
-
-
-
-## Build Process - EJ
-
-# Migrations for database
-
-# Gulp for preprocessing
-
-Remember 'gulp watch' for monitoring changes to styling
-
-npm install --global gulp
-
-npm install

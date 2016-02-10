@@ -8,15 +8,15 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\User;
-use App\Event;
+use App\Idea;
 
 class PageController extends Controller
 {
     public function home(Request $request)
 	{
-	    $events = Event::take(3)->get();
+	    $ideas = Idea::take(3)->get();
 
-	    return view('pages.home', ['navtype' => 'navbar-transparent', 'events' => $events]);
+	    return view('pages.home', ['navtype' => 'navbar-transparent', 'ideas' => $ideas]);
 	}
     public function about(Request $request)
 	{

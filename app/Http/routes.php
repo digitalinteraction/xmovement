@@ -34,16 +34,16 @@ Route::group(['middleware' => ['web']], function () {
 
     // User routes
     Route::get('/profile', 'UserController@profile');
-    Route::get('/profile/{user}', 'UserController@view');
+    Route::get('/profile/{user}', 'UserController@profile');
 
     // Page routes
     Route::get('/', 'PageController@home');
     Route::get('/about', 'PageController@about');
 
-    // Event routes
-    Route::get('/explore', 'EventController@index');
-    Route::get('/create', 'EventController@add');
-    Route::post('/event', 'EventController@store');
-    Route::get('/event/{event}', 'EventController@view');
+    // Idea routes
+    Route::get('/explore', 'IdeaController@index');
+    Route::get('/create', 'IdeaController@add');
+    Route::post('/idea', 'IdeaController@store');
+    Route::get('/idea/{idea}', 'IdeaController@view');
 
 });

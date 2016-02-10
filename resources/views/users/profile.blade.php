@@ -17,12 +17,12 @@
 		    	</div>
 
 		    	<div class="contact-button">
-		    		Send a Message
+		    		{{ trans('profile.send_a_message') }}
 		    	</div>
 
 		    	<div class="user-stats">
 		    		<h3>89%</h3>
-		    		<p>Event Success</p>
+		    		<p>{{ trans('profile.idea_success') }}</p>
 
 		    		<h3></h3>
 		    		<p></p>
@@ -34,7 +34,7 @@
 
 	    		<h2 class="user-name">{{ $user->name }}</h2>
 
-	    		<p class="user-bio">Lorem Ipsum</p>
+	    		<p class="user-bio">{{ $user->bio }}</p>
 
 	    		<ul class="activity-feed">
 
@@ -50,20 +50,20 @@
 	    		
 	    		<div class="sidebar-section">
 	    			<div class="sidebar-section-header">
-	    				Supported Events
+	    				{{ trans('profile.supported_ideas') }}
 	    			</div>
-	    			<ul class="events-list">
+	    			<ul class="ideas-list">
 	    				
-	    				<li>No events</li>
+	    				<li>{{ trans('profile.no_ideas') }}</li>
 	    			</ul>
 	    		</div>
 	    		
 	    		<div class="sidebar-section">
 	    			<div class="sidebar-section-header">
-	    				Created Events
+	    				{{ trans('profile.created_ideas') }}
 	    			</div>
-	    			<ul class="events-list">
-	    				<li>No events</li>
+	    			<ul class="ideas-list">
+	    				<li>{{ trans('profile.no_ideas') }}</li>
 	    			</ul>
 	    		</div>
 

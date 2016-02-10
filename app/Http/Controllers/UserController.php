@@ -8,22 +8,16 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\User;
-use App\Event;
+use App\Idea;
 use Auth;
 
 class UserController extends Controller
 {
-    public function profile(Request $request)
+    public function profile(Request $request, User $user)
 	{
-		$user = Auth::user();
+		$user = (!$user) ? Auth::user() : $user;
 
 	    return view('users.profile', [
-	    	'user' => $user,
-	    ]);
-	}
-    public function view(Request $request, User $user)
-	{
-	    return view('users.view', [
 	    	'user' => $user,
 	    ]);
 	}

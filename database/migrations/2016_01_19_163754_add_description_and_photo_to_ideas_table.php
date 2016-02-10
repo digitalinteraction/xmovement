@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddDescriptionAndPhotoToEventsTable extends Migration
+class AddDescriptionAndPhotoToIdeasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class AddDescriptionAndPhotoToEventsTable extends Migration
      */
     public function up()
     {
-        Schema::table('events', function ($table) {
+        Schema::table('ideas', function ($table) {
             $table->string('description', 2000);
             $table->string('photo');
         });
@@ -25,7 +25,7 @@ class AddDescriptionAndPhotoToEventsTable extends Migration
      */
     public function down()
     {
-        Schema::table('events', function ($table) {
+        Schema::table('ideas', function ($table) {
             $table->dropColumn('description');
             $table->dropColumn('photo');
         });

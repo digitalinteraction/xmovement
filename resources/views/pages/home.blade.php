@@ -7,9 +7,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-container">
-                        <h1>Make your next idea a reality</h1>
-                        <a href="{{ action('EventController@add') }}">
-                            <button>Get Started</button>
+                        <h1>{{ trans('home.tagline') }}</h1>
+                        <a href="{{ action('IdeaController@add') }}">
+                            <button>{{ trans('home.get_started') }}</button>
                         </a>
                     </div>
                 </div>
@@ -22,13 +22,13 @@
             <div class="col-md-12">
                 <div class="panel">
                     <div class="panel-heading text-center">
-                        <h2>Featured Ideas</h2>
+                        <h2>{{ trans('home.featured_ideas') }}</h2>
                     </div>
                         
                     <div class="row">
-                        @foreach ($events as $event)
+                        @foreach ($ideas as $idea)
                             <div class="col-xs-12 col-md-4">
-                                @include('events.tile')
+                                @include('ideas.tile')
                             </div>
                         @endforeach
                     </div>

@@ -5,14 +5,14 @@
     
     <div class="page-header">
         
-        <h2 class="main-title" id="page-title">Name your event</h2>
+        <h2 class="main-title" id="page-title">Name your idea</h2>
 
     </div>
 
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <form class="add-event-form" role="form" method="POST" action="{{ url('/event') }}">
+                <form class="add-idea-form" role="form" method="POST" action="{{ url('/idea') }}">
                     {!! csrf_field() !!}
 
                     <div class="form-page visible" id="form-page-1">
@@ -23,7 +23,7 @@
 
                                 <label>Choose a name that is short but self explanatory e.g. Open Python Class</label>
 
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Event name">
+                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Idea name">
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -47,7 +47,7 @@
 
                             <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
 
-                                <label>Add a short description of your event, this should include the expected outcomes</label>
+                                <label>Add a short description of your idea, this should include the expected outcomes</label>
 
                                 <textarea name="description" value="{{ old('description') }}" rows="4"></textarea>
 
@@ -74,7 +74,7 @@
                             @include('fileupload')
 
                             <div class="form-group">
-                                <button class="btn btn-primary" type="submit">Create Event</button>
+                                <button class="btn btn-primary" type="submit">Create Idea</button>
                             </div>
                         </div>
 

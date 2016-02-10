@@ -9,5 +9,5 @@ return [
     'logout' => 'Log out',
     'toggle' => 'Toggle Navigation',
     'profile' => 'Your Profile',
-    'edit' => 'Edit Profile',
+    'preferences' => 'Preferences',
 ];

@@ -4,8 +4,8 @@
 	
 	<div class="page-header">
 	    
-        <h2 class="main-title">{{ $event->name }}</h2>
-		<h5 class="sub-title">Organized by <a href="/user/{{ $event->user_id }}">{{ $event->user->name or $event->user_id }}</a></h5>
+        <h2 class="main-title">{{ $idea->name }}</h2>
+		<h5 class="sub-title">Organized by <a href="{{ action('UserController@profile', $idea->user_id) }}">{{ $idea->user->name or $idea->user_id }}</a></h5>
 
 	</div>
 
@@ -16,12 +16,12 @@
 	    
 	    		<div class="column main-column">
 
-	    			<div class="event-media">
-	    				<img src="{{ $event->photo }}" style="width:100%">
+	    			<div class="idea-media">
+	    				<img src="{{ $idea->photo }}" style="width:100%">
 	    			</div>
 	    			
-	    			<p class="event-description">
-	    				{{ $event->description }}
+	    			<p class="idea-description">
+	    				{{ $idea->description }}
 	    			</p>
 
 	    		</div>
@@ -42,7 +42,7 @@
 	    				</li>
 	    			</ul>
 
-	    			<div class="btn btn-primary">Support this Event</div>
+	    			<div class="btn btn-primary">Support this Idea</div>
 
 	    		</div>
 
