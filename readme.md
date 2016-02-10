@@ -1,3 +1,11 @@
+## Environment Setup
+
+Navigate to homestead folder
+Run - vagrant up
+SSH into homestead instance
+Navigate to project root
+Run - artisan migrate
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)

@@ -3,4 +3,8 @@
 Homestead.yaml
 Homestead.json
 .env
-public/img/events/
+public/img/events/*
+public/img/events/thumb/*
+public/img/events/small/*
+public/img/events/medium/*
+public/img/events/large/*

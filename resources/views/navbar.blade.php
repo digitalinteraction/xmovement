@@ -33,6 +33,7 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/profile') }}"></i>{{ trans('navbar.profile') }}</a></li>
                                 <li><a href="{{ url('/editprofile') }}"></i>{{ trans('navbar.edit') }}</a></li>
                                 <li><a href="{{ url('/logout') }}"></i>{{ trans('navbar.logout') }}</a></li>
                             </ul>

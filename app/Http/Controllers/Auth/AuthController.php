@@ -60,7 +60,7 @@ class AuthController extends Controller
             'facebook_id' => $facebookUser->id,
             'name' => $facebookUser->name,
             'email' => $facebookUser->email,
-            'avatar' => $facebookUser->avatar,
+            'avatar' => $facebookUser->avatar_original,
             'token' => $facebookUser->token
         ]);
     }

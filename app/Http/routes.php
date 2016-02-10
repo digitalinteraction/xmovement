@@ -32,6 +32,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('auth/facebook', 'Auth\AuthController@redirectToProvider');
     Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');
 
+    // User routes
+    Route::get('/profile', 'UserController@profile');
+    Route::get('/profile/{user}', 'UserController@view');
+
     // Page routes
     Route::get('/', 'PageController@home');
     Route::get('/about', 'PageController@about');
