@@ -25,7 +25,7 @@ class RenameFullNameToNameInUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function ($table) {
-            $table->renameColumn('full_name', 'name');
+            $table->renameColumn('name', 'full_name');
         });
     }
 }
