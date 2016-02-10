@@ -1,10 +1,15 @@
 ## Environment Setup
 
 Navigate to homestead folder
-Run - vagrant up
-SSH into homestead instance
-Navigate to project root
-Run - artisan migrate
+
+cd ~/Homestead && vagrant up && vagrant ssh && cd Code && artisan migrate && artisan db:seed
+or
+xm
+
+# Seed the database
+php artisan migrate:refresh --seed
+
+vagrant destroy --force
 
 ## Laravel PHP Framework
 
