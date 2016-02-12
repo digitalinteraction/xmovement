@@ -6848,9 +6848,10 @@ nav {
   z-index: 999;
 }
 .navbar {
-  background-color: rgba(255,255,255,0.9);
+  background-color: #fff;
   border: none;
   border-radius: 0px;
+  height: 80px;
   position: fixed;
   transition: all 0.2s linear;
 }
@@ -6865,8 +6866,11 @@ nav {
 }
 .navbar a.navbar-brand {
   color: #444;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 300;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 20px;
   transition: color 0.2s linear;
 }
 .navbar a.navbar-brand:hover {
@@ -6882,6 +6886,8 @@ nav {
   color: #666;
   font-size: 14px;
   font-weight: 500;
+  line-height: 80px;
+  padding: 0 20px;
   transition: color 0.2s linear;
 }
 .navbar .navbar-nav > li > a:hover {
@@ -6903,6 +6909,11 @@ nav {
 .dropdown-menu li a {
   padding: 15px 20px;
 }
+.navbar-toggle {
+  border: none;
+  height: 40px;
+  margin: 20px;
+}
 .navbar-toggle .icon-bar {
   background-color: #fff;
 }
@@ -6921,20 +6932,25 @@ body.fade-nav .navbar-transparent:after {
 }
 body.fade-nav .navbar-transparent a.navbar-brand {
   color: #fff;
+  line-height: 80px;
+  padding: 0 20px;
 }
-body.fade-nav .navbar-transparent .navbar-nav > li > a {
+body.fade-nav .navbar-transparent .navbar-nav li a {
   color: #fff;
+  line-height: 80px;
   transition: color 0.2s linear;
 }
-body.fade-nav .navbar-transparent .navbar-nav > li > a:hover {
+body.fade-nav .navbar-transparent .navbar-nav li a:hover {
   background: transparent;
   color: #6acda4;
 }
-body.fade-nav .navbar-transparent .navbar-collapse {
-  background-color: rgba(255,255,255,0.9);
-}
-body.fade-nav .navbar-transparent .navbar-collapse .navbar-nav > li > a {
-  color: #666;
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #fff;
+  }
+  .navbar-collapse .navbar-nav li a {
+    color: #666 !important;
+  }
 }
 .page-header {
   margin: 0;
@@ -7194,7 +7210,7 @@ h2.user-name {
 }
 body {
   font-family: 'Lato';
-  padding-top: 50px;
+  padding-top: 80px;
 }
 body[data-navbar-type="navbar-transparent"] {
   padding-top: 0;

@@ -5,9 +5,10 @@ nav
 	width 100% 
 	z-index 999
 .navbar
-	background-color rgba(255,255,255,0.9)
+	background-color white
 	border none
 	border-radius 0px
+	height $navbar-height
 	position fixed
 	&:after
 		background-color main-color
@@ -20,8 +21,11 @@ nav
 	transition(all 0.2s linear)
 	a.navbar-brand
 		color #444 
-		font-size 30px 
+		font-size 24px 
 		font-weight 300
+		height $navbar-height
+		line-height $navbar-height
+		padding 0 20px
 		transition(color 0.2s linear)
 		&:hover
 			color main-color
@@ -33,6 +37,8 @@ nav
 		color #666
 		font-size 14px 
 		font-weight 500
+		line-height $navbar-height
+		padding 0 20px
 		transition(color 0.2s linear)
 		&:hover
 			background transparent 
@@ -50,12 +56,17 @@ nav
 		a
 			padding 15px 20px
 .navbar-toggle
+	border none 
+	height 40px 
+	margin (($navbar-height - 40) / 2)
 	.icon-bar
 		background-color white
 	&:hover
 		.icon-bar
 			background-color main-color
-			
+
+// Transparent fade nav
+
 body.fade-nav
 	&.colorful
 		.navbar
@@ -67,13 +78,18 @@ body.fade-nav
 			width 0px
 		a.navbar-brand
 			color white
-		.navbar-nav > li > a
+			line-height $navbar-height
+			padding 0 20px
+		.navbar-nav li a
 			color white
+			line-height $navbar-height
 			transition(color 0.2s linear)
 			&:hover
 				background transparent 
 				color main-color
-		.navbar-collapse
-			background-color rgba(255,255,255,0.9)
-			.navbar-nav > li > a
-				color #666
+				
+@media(max-width: $screen-sm-min) 
+	.navbar-collapse
+		background-color white
+		.navbar-nav li a
+			color #666 !important

@@ -1,5 +1,5 @@
 <nav class="navbar {{ $navtype or 'navbar-default' }}">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
 
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -12,6 +12,8 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <strong>X</strong>Movement
                 </a>
+
+                <div class="clearfix"></div>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
