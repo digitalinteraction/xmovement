@@ -16,6 +16,8 @@
 		    		<img class="img-circle" src="{{ $user->avatar }}">
 		    	</div>
 
+		    	<h2 class="user-name visible-xs-block">{{ $user->name }}</h2>
+
 		    	<div class="contact-button">
 		    		{{ trans('profile.send_a_message') }}
 		    	</div>
@@ -32,7 +34,7 @@
 	
 			<div class="col-sm-8 col-md-6 col-lg-7 profile-center-column">
 
-	    		<h2 class="user-name">{{ $user->name }}</h2>
+	    		<h2 class="user-name hidden-xs">{{ $user->name }}</h2>
 
 	    		<?php if ($user->bio != "") { ?>
 	    		
