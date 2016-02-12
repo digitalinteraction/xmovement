@@ -1,6 +1,6 @@
 var elixir = require('laravel-elixir');
-
-require('laravel-elixir-stylus');
+var bootstrap = require('bootstrap-styl');
+var stylus = require('laravel-elixir-stylus');
 
 /*
  |--------------------------------------------------------------------------
@@ -15,8 +15,12 @@ require('laravel-elixir-stylus');
 
 elixir(function(mix) {
 	mix.sass('imports.scss');
-	mix.stylus('app.styl');
-    mix.copy('node_modules/masonry-layout/dist/masonry.pkgd.min.js', 'public/js/masonry.js');
+	// @import 'bootstrap'
+
+
+	mix.stylus("bootstrap.styl");
+	// mix.stylus('node_modules/bootstrap-styl/bootstrap/navbar.styl');
+	mix.stylus('app.styl', null, { use: [ bootstrap() ] });
     mix.browserSync({
         proxy: 'xm.local',
         notify: false
