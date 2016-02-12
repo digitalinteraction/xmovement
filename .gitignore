@@ -3,8 +3,6 @@
 Homestead.yaml
 Homestead.json
 .env
-public/img/ideas/*
-public/img/ideas/thumb/*
-public/img/ideas/small/*
-public/img/ideas/medium/*
-public/img/ideas/large/*
+
+public/css/**
+public/img/uploads/**
