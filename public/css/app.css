@@ -392,7 +392,7 @@ body.fade-nav .navbar-transparent .navbar-nav > li > a:hover {
 .profile-center-column ul.activity-feed {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
 }
 .profile-center-column ul.activity-feed li {
   background: #eee;
