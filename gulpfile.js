@@ -15,11 +15,7 @@ var stylus = require('laravel-elixir-stylus');
 
 elixir(function(mix) {
 	mix.sass('imports.scss');
-	// @import 'bootstrap'
-
-
 	mix.stylus("bootstrap.styl");
-	// mix.stylus('node_modules/bootstrap-styl/bootstrap/navbar.styl');
 	mix.stylus('app.styl', null, { use: [ bootstrap() ] });
     mix.browserSync({
         proxy: 'xm.local',
