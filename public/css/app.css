@@ -7088,9 +7088,14 @@ body.fade-nav .navbar-transparent .navbar-collapse .navbar-nav > li > a {
 /* Users styles */
 .profile-header {
   background: #6acda4;
-  height: 0px;
-  max-height: 300px;
-  padding-bottom: 15%;
+  height: 150px;
+}
+@media (min-width: 768px) {
+  .profile-header {
+    height: 0px;
+    max-height: 300px;
+    padding-bottom: 15%;
+  }
 }
 .profile-left-column {
   padding: 20px;
@@ -7168,7 +7173,7 @@ body.fade-nav .navbar-transparent .navbar-collapse .navbar-nav > li > a {
 }
 body {
   font-family: 'Lato';
-  padding-top: 64px;
+  padding-top: 50px;
 }
 body[data-navbar-type="navbar-transparent"] {
   padding-top: 0;

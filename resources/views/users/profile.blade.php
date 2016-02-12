@@ -6,11 +6,11 @@
 
 	</div>
 
-	<div class="row">
+	<div class="container-fluid">
+		
+		<div class="row">
 	
-		<div class="container">
-	
-			<div class="col-md-3 profile-left-column">
+			<div class="col-sm-4 col-md-3 col-lg-2 profile-left-column">
 	    		
 	    		<div class="avatar-wrapper">
 		    		<img class="img-circle" src="{{ $user->avatar }}">
@@ -20,7 +20,7 @@
 		    		{{ trans('profile.send_a_message') }}
 		    	</div>
 
-		    	<div class="user-stats">
+		    	<div class="user-stats visible-md-block visible-lg-block">
 		    		<h3>89%</h3>
 		    		<p>{{ trans('profile.idea_success') }}</p>
 
@@ -30,7 +30,7 @@
 
 	    	</div>	
 	
-			<div class="col-md-6 profile-center-column">
+			<div class="col-sm-8 col-md-6 col-lg-7 profile-center-column">
 
 	    		<h2 class="user-name">{{ $user->name }}</h2>
 
@@ -50,7 +50,7 @@
 
 	    	</div>	
 	
-			<div class="col-md-3 profile-right-column">
+			<div class="col-md-3 col-lg-3 hidden-sm profile-right-column">
 	    		
 	    		<div class="sidebar-section">
 	    			<div class="sidebar-section-header">
