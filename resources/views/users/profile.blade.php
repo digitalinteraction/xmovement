@@ -34,7 +34,11 @@
 
 	    		<h2 class="user-name">{{ $user->name }}</h2>
 
-	    		<p class="user-bio">{{ $user->bio }}</p>
+	    		<?php if ($user->bio != "") { ?>
+	    		
+	    			<p class="user-bio">{{ $user->bio }}</p>
+
+    			<?php } ?>
 
 	    		<ul class="activity-feed">
 

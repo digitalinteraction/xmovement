@@ -52,7 +52,7 @@ class UploadHandler
         //http://docs.aws.amazon.com/aws-sdk-php/guide/latest/service-s3.html#amazon-s3-stream-wrapper
 
         $this->prefix='/'; //note there is no "folders" in S3 though you can prefix files with a string that resembles a file system.
-        $this->bucket="eventmovement";
+        $this->bucket="xmovement";
 
         //compatible with PHP frameworks such as Codeigniter by calling:
         // $CI = & get_instance(); //get Codeigniter instance

@@ -15,7 +15,7 @@ class UserController extends Controller
 {
     public function profile(Request $request, User $user)
 	{
-		$user = (!$user) ? Auth::user() : $user;
+		$user = (is_null($user->id)) ? Auth::user() : $user;
 
 	    return view('users.profile', [
 	    	'user' => $user,

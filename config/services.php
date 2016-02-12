@@ -38,7 +38,7 @@ return [
     'facebook' => [
         'client_id' => '758108954295416',
         'client_secret' => '9dc5ca1ee540f3b6f4bfae3dce28841d',
-        'redirect' => 'http://eventmovement.local/auth/facebook/callback',
+        'redirect' => 'http://xm.local/auth/facebook/callback',
     ],
 
 ];

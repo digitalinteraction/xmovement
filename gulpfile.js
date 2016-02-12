@@ -18,7 +18,7 @@ elixir(function(mix) {
 	mix.stylus('app.styl');
     mix.copy('node_modules/masonry-layout/dist/masonry.pkgd.min.js', 'public/js/masonry.js');
     mix.browserSync({
-        proxy: 'eventmovement.local',
+        proxy: 'xm.local',
         notify: false
     });
 });
