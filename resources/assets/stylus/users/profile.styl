@@ -1,26 +1,44 @@
 .profile-header
 	background main-color
-	height 0px
-	max-height 300px
-	padding-bottom 15%
+	height 120px 
+	@media(min-width: $screen-sm-min)
+		height 0px
+		max-height 300px
+		padding-bottom 15%
 
+h2.user-name
+	color #444
+	font-size 40px 
+	font-weight 300 
+	margin 0
+	padding 0
+	
 .profile-left-column
 	padding 20px
-	
+	text-align center
+	@media(min-width: $screen-sm-min)
+		text-align left
 	.avatar-wrapper
 		position relative
-		top -100px 
-		margin-bottom -70px  
+		top -100px
+		margin-bottom -80px
 		text-align center
+		@media(min-width: $screen-sm-min)
+			top -100px
 		img
 			background white 
 			border white 4px solid
-			height 180px
-			width 180px 
+			height 140px
+			width 140px
+			@media(min-width: $screen-sm-min)
+				height 180px
+				width 180px 
 	.contact-button
 		border #e1e1e1 1px solid
 		color #ccc
 		font-size 16px 
+		margin 20px auto
+		max-width 250px 
 		padding 12px 20px
 		text-align center
 		transition(all 0.2 linear)
@@ -34,13 +52,8 @@
 	border-right #e9e9e9 1px solid
 	border-left #e9e9e9 1px solid
 	min-height 600px
-	padding 30px 
-	h2.user-name
-		color #444
-		font-size 40px 
-		font-weight 300 
-		margin 0
-		padding 0
+	@media(min-width: $screen-sm-min)
+		padding 30px
 	p.user-bio
 		border-left main-color 4px solid
 		margin 20px 0
