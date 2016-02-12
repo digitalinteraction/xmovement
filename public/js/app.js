@@ -126,8 +126,8 @@ $(function () {
 
             		$('#photo-error-message').html('').css('display', 'none');
 
-	                $('#files').html('<img src="/img/events/'+file.name+'" />');
-		            $('#event-photo').val(document.location.origin + '/img/events/' + file.name);
+	                $('#files').html('<img src="/img/ideas/'+file.name+'" />');
+		            $('#event-photo').val(document.location.origin + '/img/ideas/' + file.name);
 
             	}
             });
