@@ -19,6 +19,7 @@
 body
 	font-family 'Lato'
 	padding-top 64px
+	
 body[data-navbar-type="navbar-transparent"]
 	padding-top 0
 
@@ -103,6 +104,9 @@ body.colorful
 	min-width 320px
 	padding 40px 60px 10px 60px 
 	text-align center
+	@media(max-width: 460px)
+		border-radius 0px
+		padding 40px 30px 10px 30px 
 	
 	.login-form, .register-form
 		position relative

@@ -131,7 +131,6 @@ nav {
   font-weight: 400;
 }
 .navbar .navbar-nav > li {
-  height: 38px;
   z-index: 999;
 }
 .navbar .navbar-nav > li > a {
@@ -185,6 +184,12 @@ body.fade-nav .navbar-transparent .navbar-nav > li > a {
 body.fade-nav .navbar-transparent .navbar-nav > li > a:hover {
   background: transparent;
   color: #6acda4;
+}
+body.fade-nav .navbar-transparent .navbar-collapse {
+  background-color: rgba(255,255,255,0.9);
+}
+body.fade-nav .navbar-transparent .navbar-collapse .navbar-nav > li > a {
+  color: #666;
 }
 .page-header {
   margin: 0;
@@ -392,7 +397,7 @@ body.fade-nav .navbar-transparent .navbar-nav > li > a:hover {
 .profile-center-column ul.activity-feed {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
 }
 .profile-center-column ul.activity-feed li {
   background: #eee;
@@ -509,6 +514,13 @@ body.colorful .page-header h2 {
   min-width: 320px;
   padding: 40px 60px 10px 60px;
   text-align: center;
+}
+@media (max-width: 460px) {
+  .login-panel,
+  .register-panel {
+    border-radius: 0px;
+    padding: 40px 30px 10px 30px;
+  }
 }
 .login-panel .login-form,
 .register-panel .login-form,
