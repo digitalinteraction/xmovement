@@ -35,6 +35,7 @@ Route::group(['middleware' => ['web']], function () {
     // User routes
     Route::get('/profile', 'UserController@profile');
     Route::get('/profile/{user}', 'UserController@profile');
+    Route::match(['get', 'post'], '/details', 'UserController@details');
 
     // Page routes
     Route::get('/', 'PageController@home');

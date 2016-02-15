@@ -7294,8 +7294,7 @@ body.colorful .page-header {
 body.colorful .page-header h2 {
   color: #fff;
 }
-.login-panel,
-.register-panel {
+.auth-panel {
   background-color: #fff;
   border-radius: 6px;
   margin: 0 auto;
@@ -7305,39 +7304,26 @@ body.colorful .page-header h2 {
   text-align: center;
 }
 @media (max-width: 460px) {
-  .login-panel,
-  .register-panel {
+  .auth-panel {
     border-radius: 0px;
     padding: 40px 30px 10px 30px;
   }
 }
-.login-panel .login-form,
-.register-panel .login-form,
-.login-panel .register-form,
-.register-panel .register-form {
+.auth-panel .auth-form {
   position: relative;
   left: auto;
   right: auto;
   top: auto;
   bottom: auto;
 }
-.login-panel .login-form .form-group,
-.register-panel .login-form .form-group,
-.login-panel .register-form .form-group,
-.register-panel .register-form .form-group {
+.auth-panel .auth-form .form-group {
   margin-bottom: 20px !important;
 }
-.login-panel .login-form .form-group .control-label,
-.register-panel .login-form .form-group .control-label,
-.login-panel .register-form .form-group .control-label,
-.register-panel .register-form .form-group .control-label {
+.auth-panel .auth-form .form-group .control-label {
   color: #888;
   margin-bottom: 10px;
 }
-.login-panel .login-form .form-group .form-control,
-.register-panel .login-form .form-group .form-control,
-.login-panel .register-form .form-group .form-control,
-.register-panel .register-form .form-group .form-control {
+.auth-panel .auth-form .form-group .form-control {
   border: #e1e1e1 1px solid;
   border-radius: 4px;
   box-shadow: none;
@@ -7349,14 +7335,8 @@ body.colorful .page-header h2 {
   text-align: center;
   width: 100%;
 }
-.login-panel .login-form .forgot-link,
-.register-panel .login-form .forgot-link,
-.login-panel .register-form .forgot-link,
-.register-panel .register-form .forgot-link,
-.login-panel .login-form .login-link,
-.register-panel .login-form .login-link,
-.login-panel .register-form .login-link,
-.register-panel .register-form .login-link {
+.auth-panel .auth-form .forgot-link,
+.auth-panel .auth-form .login-link {
   color: #999;
   margin: 10px 10px 0 10px;
   text-decoration: underline;

@@ -7,9 +7,11 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Http\Request;
 
 use Socialite;
 use Auth;
+use Redirect;
 
 class AuthController extends Controller
 {
@@ -40,8 +42,7 @@ class AuthController extends Controller
 
         Auth::login($authUser, true);
 
-        // return Redirect::to('home');
-        return redirect()->action('PageController@home');
+        return Redirect::to($this->getRedirectPath());
     }
 
     /**
@@ -83,7 +84,15 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    public function getRedirectPath()
+    {
+        return ((!strlen(Auth::user()->phone)) || (!strlen(Auth::user()->bio))) ? action('UserController@details') : action('UserController@profile', Auth::user()->id);
+    }
+
+    protected function redirectPath()
+    {
+        return $this->getRedirectPath();
+    }
 
     /**
      * Create a new authentication controller instance.

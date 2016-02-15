@@ -11,9 +11,9 @@
     <div class="container">
         <div class="row">
             
-            <div class="login-panel">
+            <div class="auth-panel">
             
-                <form class="login-form" role="form" method="POST" action="{{ url('/login') }}">
+                <form class="auth-form" role="form" method="POST" action="{{ url('/login') }}">
                     {!! csrf_field() !!}
 
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
