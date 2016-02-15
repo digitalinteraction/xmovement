@@ -6936,11 +6936,14 @@ body.fade-nav .navbar-transparent a.navbar-brand {
   padding: 0 20px;
 }
 body.fade-nav .navbar-transparent .navbar-nav li a {
+  color: #666;
+}
+body.fade-nav .navbar-transparent .navbar-nav > li > a {
   color: #fff;
   line-height: 80px;
   transition: color 0.2s linear;
 }
-body.fade-nav .navbar-transparent .navbar-nav li a:hover {
+body.fade-nav .navbar-transparent .navbar-nav > li > a:hover {
   background: transparent;
   color: #6acda4;
 }
@@ -6948,7 +6951,7 @@ body.fade-nav .navbar-transparent .navbar-nav li a:hover {
   .navbar-collapse {
     background-color: #fff;
   }
-  .navbar-collapse .navbar-nav li a {
+  .navbar-collapse .navbar-nav > li > a {
     color: #666 !important;
   }
 }

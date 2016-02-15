@@ -81,6 +81,8 @@ body.fade-nav
 			line-height $navbar-height
 			padding 0 20px
 		.navbar-nav li a
+			color #666 
+		.navbar-nav > li > a
 			color white
 			line-height $navbar-height
 			transition(color 0.2s linear)
@@ -91,5 +93,5 @@ body.fade-nav
 @media(max-width: $screen-sm-min) 
 	.navbar-collapse
 		background-color white
-		.navbar-nav li a
+		.navbar-nav > li > a
 			color #666 !important
