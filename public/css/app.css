@@ -6841,11 +6841,17 @@ margin 20px img,
   margin: 20px;
 }
 /* Import elements */
-nav {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 999;
+.footer {
+  border-top: #e1e1e1 1px solid;
+}
+.footer .footer-content {
+  padding: 20px;
+  text-align: center;
+}
+.footer .footer-content p {
+  color: #ccc;
+  margin: 0;
+  padding: 0;
 }
 .navbar {
   background-color: #fff;
@@ -6853,6 +6859,9 @@ nav {
   border-radius: 0px;
   height: 80px;
   position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
   transition: all 0.2s linear;
 }
 .navbar:after {
@@ -6898,9 +6907,6 @@ nav {
   background: transparent;
   color: #6acda4;
 }
-.navbar .navbar-collapse li:hover {
-  background: #f2f2f2;
-}
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
@@ -6913,8 +6919,14 @@ nav {
   overflow: hidden;
   padding: 0;
 }
+.dropdown-menu li {
+  background: #fff;
+}
+.dropdown-menu li:hover {
+  background: #f2f2f2;
+}
 .dropdown-menu li a {
-  padding: 15px 20px;
+  padding: 15px 20px !important;
 }
 .navbar-toggle {
   border: none;
@@ -6972,6 +6984,9 @@ body.fade-nav.transparent .navbar .navbar-toggle:hover .icon-bar {
 @media (max-width: 768px) {
   .navbar-collapse {
     background-color: #fff;
+  }
+  .navbar-collapse .navbar-nav li:hover {
+    background: #f2f2f2;
   }
   .navbar-collapse .navbar-nav > li > a {
     color: #666 !important;
