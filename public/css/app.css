@@ -6879,6 +6879,10 @@ nav {
 .navbar a.navbar-brand strong {
   font-weight: 400;
 }
+.navbar .navbar-nav {
+  margin: 0 -15px;
+  padding: 0 -15px;
+}
 .navbar .navbar-nav > li {
   z-index: 999;
 }
@@ -6893,6 +6897,9 @@ nav {
 .navbar .navbar-nav > li > a:hover {
   background: transparent;
   color: #6acda4;
+}
+.navbar .navbar-collapse li:hover {
+  background: #f2f2f2;
 }
 .nav .open > a,
 .nav .open > a:hover,
@@ -6915,37 +6922,52 @@ nav {
   margin: 20px;
 }
 .navbar-toggle .icon-bar {
-  background-color: #fff;
+  background-color: #6acda4;
 }
 .navbar-toggle:hover .icon-bar {
-  background-color: #6acda4;
+  background-color: #3fba87;
 }
 body.fade-nav.colorful .navbar {
   background-color: #fff;
 }
-body.fade-nav .navbar-transparent {
+body.fade-nav.transparent .navbar {
   background-color: transparent;
 }
-body.fade-nav .navbar-transparent:after {
+body.fade-nav.transparent .navbar:after {
   opacity: 0;
   width: 0px;
 }
-body.fade-nav .navbar-transparent a.navbar-brand {
+body.fade-nav.transparent .navbar a.navbar-brand {
   color: #fff;
   line-height: 80px;
   padding: 0 20px;
 }
-body.fade-nav .navbar-transparent .navbar-nav li a {
+body.fade-nav.transparent .navbar .navbar-nav {
+  margin: 0 -15px;
+  padding: 0 -15px;
+}
+body.fade-nav.transparent .navbar .navbar-nav li a {
   color: #666;
 }
-body.fade-nav .navbar-transparent .navbar-nav > li > a {
+body.fade-nav.transparent .navbar .navbar-nav > li > a {
   color: #fff;
   line-height: 80px;
   transition: color 0.2s linear;
 }
-body.fade-nav .navbar-transparent .navbar-nav > li > a:hover {
+body.fade-nav.transparent .navbar .navbar-nav > li > a:hover {
   background: transparent;
   color: #6acda4;
+}
+body.fade-nav.transparent .navbar .navbar-toggle {
+  border: none;
+  height: 40px;
+  margin: 20px;
+}
+body.fade-nav.transparent .navbar .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+body.fade-nav.transparent .navbar .navbar-toggle:hover .icon-bar {
+  background-color: #6acda4;
 }
 @media (max-width: 768px) {
   .navbar-collapse {
@@ -7215,7 +7237,7 @@ body {
   font-family: 'Lato';
   padding-top: 80px;
 }
-body[data-navbar-type="navbar-transparent"] {
+body.transparent {
   padding-top: 0;
 }
 .visuallyhidden {

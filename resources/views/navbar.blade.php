@@ -1,4 +1,4 @@
-<nav class="navbar {{ $navtype or 'navbar-default' }}">
+<nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
 

@@ -16,10 +16,10 @@ class PageController extends Controller
 	{
 	    $ideas = Idea::take(3)->get();
 
-	    return view('pages.home', ['navtype' => 'navbar-transparent', 'ideas' => $ideas]);
+	    return view('pages.home', ['ideas' => $ideas]);
 	}
     public function about(Request $request)
 	{
-	    return view('pages.about', ['navtype' => 'navbar-transparent']);
+	    return view('pages.about');
 	}
 }

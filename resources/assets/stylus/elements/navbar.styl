@@ -31,6 +31,9 @@ nav
 			color main-color
 		strong
 			font-weight 400 
+	.navbar-nav
+		margin 0 -15px
+		padding 0 -15px 
 	.navbar-nav > li
 		z-index 999 
 	.navbar-nav > li > a
@@ -43,6 +46,9 @@ nav
 		&:hover
 			background transparent 
 			color main-color
+	.navbar-collapse li:hover
+		background #f2f2f2 
+		
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
 	background-color transparent
@@ -60,10 +66,10 @@ nav
 	height 40px 
 	margin (($navbar-height - 40) / 2)
 	.icon-bar
-		background-color white
+		background-color main-color
 	&:hover
 		.icon-bar
-			background-color main-color
+			background-color darken(main-color, 20%)
 
 // Transparent fade nav
 
@@ -71,7 +77,8 @@ body.fade-nav
 	&.colorful
 		.navbar
 			background-color white
-	.navbar-transparent
+body.fade-nav.transparent
+	.navbar
 		background-color transparent
 		&:after
 			opacity 0 
@@ -80,6 +87,9 @@ body.fade-nav
 			color white
 			line-height $navbar-height
 			padding 0 20px
+		.navbar-nav
+			margin 0 -15px
+			padding 0 -15px 
 		.navbar-nav li a
 			color #666 
 		.navbar-nav > li > a
@@ -89,6 +99,15 @@ body.fade-nav
 			&:hover
 				background transparent 
 				color main-color
+		.navbar-toggle
+			border none 
+			height 40px 
+			margin (($navbar-height - 40) / 2)
+			.icon-bar
+				background-color white
+			&:hover
+				.icon-bar
+					background-color main-color
 				
 @media(max-width: $screen-sm-min) 
 	.navbar-collapse

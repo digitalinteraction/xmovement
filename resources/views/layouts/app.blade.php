@@ -14,9 +14,8 @@
     <!-- Styles -->
     <link href="/css/imports.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
-    
 </head>
-<body class="fade-nav" data-navbar-type="{{ $navtype or 'navbar-default' }}" id="app-layout">
+<body class="fade-nav {{ $bodyclasses or '' }}" id="app-layout">
     
     @include('facebook-sdk')
 

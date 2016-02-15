@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['bodyclasses' => 'transparent'])
 
 @section('content')
     <div class="container-fluid hero-container">
