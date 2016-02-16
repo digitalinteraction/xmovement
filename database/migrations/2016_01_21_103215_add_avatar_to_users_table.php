@@ -13,7 +13,7 @@ class AddAvatarToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function ($table) {
-            $table->string('avatar')->after('name');
+            $table->string('avatar')->after('name')->default('http://xm.local/img/placeholders/avatar.jpg');
         });
     }
 
