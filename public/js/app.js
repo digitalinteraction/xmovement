@@ -62,7 +62,7 @@ function searchCC() {
 
                 $('#cc-search-results .cc-search-result').removeClass('selected');
                 $(this).addClass('selected');
-                $('#event-photo').val($(this).attr('data-url'));
+                $('#uploaded-photo').val($(this).attr('data-url'));
 
             });
             
@@ -110,7 +110,7 @@ $(function () {
             		$('#photo-error-message').html(file.error).css('display', 'block');
 
 	                $('#files').html('');
-		            $('#event-photo').val('');
+		            $('#uploaded-photo').val('');
 
 		            $('#progress .progress-bar').css('width', '0%');
 
@@ -127,7 +127,7 @@ $(function () {
             		$('#photo-error-message').html('').css('display', 'none');
 
 	                $('#files').html('<img src="/img/uploads/'+file.name+'" />');
-		            $('#event-photo').val(document.location.origin + '/img/uploads/' + file.name);
+		            $('#uploaded-photo').val(document.location.origin + '/img/uploads/' + file.name);
 
             	}
             });

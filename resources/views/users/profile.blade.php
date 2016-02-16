@@ -2,9 +2,7 @@
 
 @section('content')
 
-	<div class="fluid-row profile-header">
-
-	</div>
+	<div class="fluid-row profile-header"></div>
 
 	<div class="container-fluid">
 		

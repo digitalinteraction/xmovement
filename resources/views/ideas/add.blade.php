@@ -71,7 +71,7 @@
 
                         <div class="form-page-content">
 
-                            @include('fileupload')
+                            @include('fileupload', ['cc' => true, 'value' => old('photo')])
 
                             <div class="form-group">
                                 <button class="btn btn-primary" type="submit">Create Idea</button>

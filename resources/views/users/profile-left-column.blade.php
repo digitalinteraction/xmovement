@@ -11,9 +11,6 @@
 	</div>
 
 	<div class="user-stats visible-md-block visible-lg-block">
-		<h3>89%</h3>
-		<p>{{ trans('profile.idea_success') }}</p>
-
 		<h3></h3>
 		<p></p>
 	</div>

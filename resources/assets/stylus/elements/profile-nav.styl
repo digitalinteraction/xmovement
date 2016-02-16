@@ -2,14 +2,31 @@
 
 .profile-nav
 	border-bottom border-color 1px solid 
-	padding 10px 0
 	ul
 		list-style none
 		margin 0
 		padding 0
 		li
+			background white
+			border #fff 1px solid
+			border-bottom border-color 1px solid
 			display inline-block
 			margin 0
-			padding 5px 10px
+			padding 0
+			position relative
+			bottom -1px
+			transition(all .5s linear)
 			a
 				color #aaa
+				font-size 15px 
+				line-height 50px 
+				padding 10px 20px
+				&:hover
+					color main-color
+					text-decoration none
+			&.active
+				background #f9f9f9
+				border border-color 1px solid 
+				border-bottom #f9f9f9 1px solid 
+				a
+					color main-color

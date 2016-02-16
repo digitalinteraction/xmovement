@@ -1,7 +1,7 @@
 <div class="input-section">
     <div class="input-wrapper">
         
-        <input name="photo" type="hidden" id="event-photo">
+        <input name="photo" type="hidden" id="uploaded-photo" value="{{ $value }}">
     
         <!-- The fileinput-button span is used to style the file input field as button -->
         <span class="btn btn-success fileinput-button" id="fileinput-button">
@@ -10,17 +10,21 @@
             <input id="fileupload" type="file" name="files[]">
         </span>
 
-        <!-- CC IMAGES -->
+        <?php if ($cc) { ?>
 
-        <span class="text-muted" style="margin: 0 10px">or</span>
+            <!-- CC IMAGES -->
 
-        <input type="text" name="cc-search-field" id="cc-search-field" placeholder="Search the web for a photo.." />
+            <span class="text-muted" style="margin: 0 10px">or</span>
 
-        <div class="btn" style="margin: 0" id="cc-search-button"><i class="fa fa-search"></i></div>
+            <input type="text" name="cc-search-field" id="cc-search-field" placeholder="Search the web for a photo.." />
 
-        <ul id="cc-search-results"></ul>
+            <div class="btn" id="cc-search-button"><i class="fa fa-search"></i></div>
 
-        <!-- CC IMAGES -->
+            <ul id="cc-search-results"></ul>
+
+            <!-- CC IMAGES -->
+
+        <?php } ?>
 
         <!-- The global progress bar -->
         <div id="progress" class="progress visuallyhidden">
