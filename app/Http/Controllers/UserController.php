@@ -18,9 +18,8 @@ class UserController extends Controller
 {
     public function profile(Request $request, User $user)
 	{
-		// Check if user was passed, if not load authenticated user
-		$user = (is_null($user->id)) ? Auth::user() : $user;
-
+		if (is_null($user->id)) { $user = Auth::user(); }
+		
 		$supported_ideas = []; // TODO
 		$created_ideas = Idea::where('user_id', $user->id)->get();
 

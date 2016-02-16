@@ -5,7 +5,7 @@
 		    {{ $idea->name }}
 		</h4>
 		<p>
-		    Posted by <a href="{{ action('UserController@profile', $idea->user_id) }}">{{ $idea->user->name or $idea->user_id }}</a>
+		    Posted by <a href="{{ action('UserController@profile', [$idea->user]) }}">{{ $idea->user->name or $idea->user_id }}</a>
 		</p>
 	</div>
 </div>
