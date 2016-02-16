@@ -10,7 +10,7 @@
             </button>
 
             <a class="navbar-brand" href="{{ url('/') }}">
-                <strong>X</strong>Movement
+                <strong>{{ trans('common.brand') }}</strong>
             </a>
 
             <div class="clearfix"></div>
@@ -26,8 +26,8 @@
                 <li><a href="{{ action('PageController@about') }}">{{ trans('navbar.about') }}</a></li>
 
                 @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">{{ trans('navbar.login') }}</a></li>
-                    <li><a href="{{ url('/register') }}">{{ trans('navbar.register') }}</a></li>
+                    <li><a href="{{ action('Auth\AuthController@showLoginForm') }}">{{ trans('navbar.login') }}</a></li>
+                    <li><a href="{{ action('Auth\AuthController@showRegistrationForm') }}">{{ trans('navbar.register') }}</a></li>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -35,9 +35,9 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ action('UserController@profile') }}"></i>{{ trans('navbar.profile') }}</a></li>
-                            <li><a href="{{ action('IdeaController@profile') }}"></i>{{ trans('navbar.preferences') }}</a></li>
-                            <li><a href="{{ action('AuthController@logout') }}"></i>{{ trans('navbar.logout') }}</a></li>
+                            <li><a href="{{ action('UserController@profile', Auth::user()->id) }}"></i>{{ trans('navbar.profile') }}</a></li>
+                            <li><a href="{{ action('UserController@profile', Auth::user()->id) }}"></i>{{ trans('navbar.preferences') }}</a></li>
+                            <li><a href="{{ action('Auth\AuthController@logout') }}"></i>{{ trans('navbar.logout') }}</a></li>
                         </ul>
                     </li>
                 @endif

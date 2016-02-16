@@ -6842,7 +6842,7 @@ margin 20px img,
 }
 /* Import elements */
 .footer {
-  border-top: #e1e1e1 1px solid;
+  border-top: #e9e9e9 1px solid;
   margin-top: 30px;
 }
 .footer .footer-content {
@@ -6851,6 +6851,8 @@ margin 20px img,
 }
 .footer .footer-content ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .footer .footer-content ul li {
   display: inline-block;
@@ -7315,6 +7317,10 @@ a {
   position: relative;
   margin-top: -20px;
 }
+.hero-container .text-container {
+  position: relative;
+  z-index: 1;
+}
 .hero-container .black-overlay {
   background-color: rgba(30,0,0,0.4);
   position: absolute;
@@ -7322,6 +7328,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 0;
 }
 .text-container {
   text-align: center;
