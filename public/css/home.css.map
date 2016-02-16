@@ -1,1 +1,0 @@
-{"version":3,"sources":["home.styl","home.css"],"names":[],"mappings":"AAAA;EACC,iBAAA;CCCA","file":"home.css","sourcesContent":[".start-event-container\n\tbackground red",".start-event-container {\n  background: #f00;\n}\n"],"sourceRoot":"/source/"}
