@@ -35,9 +35,9 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/profile') }}"></i>{{ trans('navbar.profile') }}</a></li>
-                            <li><a href="{{ url('/profile#preferences') }}"></i>{{ trans('navbar.preferences') }}</a></li>
-                            <li><a href="{{ url('/logout') }}"></i>{{ trans('navbar.logout') }}</a></li>
+                            <li><a href="{{ action('UserController@profile') }}"></i>{{ trans('navbar.profile') }}</a></li>
+                            <li><a href="{{ action('IdeaController@profile') }}"></i>{{ trans('navbar.preferences') }}</a></li>
+                            <li><a href="{{ action('AuthController@logout') }}"></i>{{ trans('navbar.logout') }}</a></li>
                         </ul>
                     </li>
                 @endif

@@ -1,10 +1,33 @@
 // Footer
+
 .footer
 	border-top #e1e1e1 1px solid
+	margin-top 30px 
 	.footer-content
 		padding 20px 
 		text-align center
-		p
-			color #CCC 
-			margin 0
-			padding 0
+		ul
+			list-style none 
+			li
+				display inline-block 
+				margin 0 10px
+				padding 0
+				p
+					color #CCC
+				a
+					color #CCC
+					&:hover
+						color main-color
+			
+body.colorful
+	.footer
+		border-top none
+		.footer-content
+			ul
+				li
+					p
+						color white
+					a
+						color white
+						&:hover
+							color rgba(255, 255, 255, 0.8)

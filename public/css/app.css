@@ -6843,15 +6843,40 @@ margin 20px img,
 /* Import elements */
 .footer {
   border-top: #e1e1e1 1px solid;
+  margin-top: 30px;
 }
 .footer .footer-content {
   padding: 20px;
   text-align: center;
 }
-.footer .footer-content p {
-  color: #ccc;
-  margin: 0;
+.footer .footer-content ul {
+  list-style: none;
+}
+.footer .footer-content ul li {
+  display: inline-block;
+  margin: 0 10px;
   padding: 0;
+}
+.footer .footer-content ul li p {
+  color: #ccc;
+}
+.footer .footer-content ul li a {
+  color: #ccc;
+}
+.footer .footer-content ul li a:hover {
+  color: #6acda4;
+}
+body.colorful .footer {
+  border-top: none;
+}
+body.colorful .footer .footer-content ul li p {
+  color: #fff;
+}
+body.colorful .footer .footer-content ul li a {
+  color: #fff;
+}
+body.colorful .footer .footer-content ul li a:hover {
+  color: rgba(255,255,255,0.8);
 }
 .navbar {
   background-color: #fff;

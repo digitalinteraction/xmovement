@@ -40,6 +40,8 @@ Route::group(['middleware' => ['web']], function () {
     // Page routes
     Route::get('/', 'PageController@home');
     Route::get('/about', 'PageController@about');
+    Route::get('/contact', 'PageController@contact');
+    Route::get('/terms', 'PageController@terms');
 
     // Idea routes
     Route::get('/explore', 'IdeaController@index');
