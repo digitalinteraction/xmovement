@@ -35,10 +35,14 @@ class UserController extends Controller
 		} else if ($request->isMethod('post')) {
 
 		    $this->validate($request, [
+		    	'name' => 'required|max:255',
+	            'email' => 'required|email|max:255|unique:users,email,'.$user->id,
 		        'phone' => 'max:255',
 		        'bio' => 'required|max:2000'
 		    ]);
 
+			$user->name = $request->name;
+			$user->email = $request->email;
 			$user->phone = $request->phone;
 			$user->bio = $request->bio;
 
