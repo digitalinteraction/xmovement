@@ -1,5 +1,10 @@
 ## XMovement
-A core framework on which crowd commissioning platforms can be developed.
+A core open source framework on which crowd commissioning platforms can be developed.
+
+## Bundled Software
+Laravel (MIT) by Laravel : https://github.com/laravel/laravel
+Masonry (MIT) by David DeSandro : https://github.com/desandro/masonry
+jQuery File Upload (MIT) by @blueimp : https://github.com/blueimp/jQuery-File-Upload
 
 ### Environment Setup
 
