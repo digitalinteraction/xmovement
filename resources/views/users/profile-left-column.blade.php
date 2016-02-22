@@ -1,7 +1,7 @@
 <div class="col-sm-4 col-md-3 col-lg-2 profile-left-column">
 	
 	<div class="avatar-wrapper">
-		<img class="img-circle" src="{{ $user->avatar }}">
+		<img class="avatar" style="background-image: url('{{ $user->avatar }}')">
 	</div>
 
 	<h2 class="user-name visible-xs-block">{{ $user->name }}</h2>
