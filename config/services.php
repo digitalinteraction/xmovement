@@ -36,9 +36,9 @@ return [
     ],
 
     'facebook' => [
-        'client_id' => '758108954295416',
-        'client_secret' => '9dc5ca1ee540f3b6f4bfae3dce28841d',
-        'redirect' => 'http://xm.local/auth/facebook/callback',
+        'client_id' => env('FB_CLIENT_ID'),
+        'client_secret' => env('FB_CLIENT_SECRET'),
+        'redirect' => env('FB_REDIRECT'),
     ],
 
 ];
